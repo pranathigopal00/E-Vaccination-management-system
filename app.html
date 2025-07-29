@@ -1,0 +1,93 @@
+<?php include 'pg12.php';?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VACCINE REGISTRATION</title>
+</head>
+<body style="background: linear-gradient(to right,#C1CDC1, #ADD8E6);">
+    <center>
+        <h1>VACCINE REGISTRATION FORM</h1>
+        <div style="background-color:#4B0082; margin:30%; padding-top:15px; margin-top: 10px; color:red; font-size:15px;height:1100px">
+            <form action="pg12.php" method="post" enctype="multipart/form-data">
+                <table cellspacing="10px" cellpadding="5%" align="left">
+                   <tr>
+<p  style="color:yellow;" style="font-family: sans-serif" ><font size="25"><b>VACCINE INFORMATION       
+     </font></b>
+ </p></tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <hr>
+                            <h2>Check Vaccine Presence</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><font color=#04AA6D>Check Vaccine Presence: </font></td>
+                        <td><input type="text" name="checkVaccine" placeholder="Enter vaccine name" style="width:100%; padding: 5px;"/></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button type="submit" name="check">Check Vaccine Presence</button></td>
+                    </tr>
+                    <tr>
+                        <td><font color=#04AA6D>First name:* </font></td>
+                        <td><input type="text" name="FirstName" placeholder="FirstName" style="width:100%; size:30; padding: 5px;"/></td>
+                    </tr>
+                    <tr>
+                        <td><font color=#04AA6D>Last Name:</td>
+                        <td><input type="text" name="LastName" placeholder="LastName" style="width:100%; padding: 5px;"></td>
+                    </tr>
+                    <tr>
+                        <td><font color=#04AA6D>Date of Birth :* </font></td>
+                        <td><input type="date" name="dob" style="width:100%; padding: 5px;"/></td>
+                    </tr>
+                    <tr>
+                        <td><font color=#04AA6D>Email id: * </font></td>
+                        <td>
+                            <input type="text" name="Email" placeholder="Email" style="width:100%; padding: 5px;"/>
+                            <font color="red">(one e-mail id only):</font>
+                            <font color="yellow">e.g. smith@hotmail.com</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><font color=#04AA6D>Mobile number:* </font></td>
+                        <td><input type="text" name="Mobile" placeholder="Mobile no" style="width:100%; padding: 5px;"/></td>
+                    </tr>
+                    <tr>
+                        <td><font color=#04AA6D>Gender: Male/Female * </font></td>
+                        <td>
+                            <input type="radio" name="Gender" value="male">Male
+                            <input type="radio" name="Gender" value="female">Female
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><font color=#04AA6D>Address: *</font></td>
+                        <td><textarea name="Address" rows="5" cols="40"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><font color=#04AA6D>vaccine name:* </font></td>
+                        <td><textarea name="vaccineName" rows="5" cols="40"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><font color=#04AA6D>vaccine date* </font></td>
+                        <td><input type="date" name="vaccineDate" style="width:100%; padding: 5px;"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button type="submit"name="save">Upload and Save</button></td>
+                        <td><input type="reset"name="reset"></td>
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+    </center>
+</body>
+</html>
