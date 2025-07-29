@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccine Information</title>
+    <style>
+        .result {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body style="background: linear-gradient(to right,#ADD8E6, #FFDAB9,#FFB6C1 );">
+    <h1>Vaccine Information</h1>
+
+    <form id="vaccineForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" required><br>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <div id="result" class="result" style="display: none;">
+        <h2>Entered Information:</h2>
+        <p><strong>Name:</strong> <span id="resultName"></span></p>
+        <p><strong>Phone Number:</strong> <span id="resultPhoneNumber"></span></p>
+
+        <h2>Vaccine Names:</h2>
+        <ul id="vaccineList"></ul>
+    </div>
+
+    <script>
+        var vaccineNames = ["BCG", "HepB", "Poliovirus", "DTP", "Hib", "PCV", "RV", "Typhoid", "MMR", "Varicella", "HepA", "Tdap", "Hpv", "Chickenpox", "Pneumococcal", "COVID"];
+
+        function submitForm() {
+            var name = document.getElementById('name').value;
+            var phoneNumber = document.getElementById('phoneNumber').value;
+
+            // Display entered information
+            document.getElementById('resultName').textContent = name;
+            document.getElementById('resultPhoneNumber').textContent = phoneNumber;
+
+            // Display vaccine names
+            var vaccineList = document.getElementById('vaccineList');
+            vaccineList.innerHTML = '';
+            for (var i = 0; i < vaccineNames.length; i++) {
+                var listItem = document.createElement('li');
+                listItem.textContent = vaccineNames[i];
+                vaccineList.appendChild(listItem);
+            }
+
+            // Show the result section
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
