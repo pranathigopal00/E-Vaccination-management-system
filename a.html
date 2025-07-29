@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        javascript
+    </title>
+    <body>
+        <script>
+function rs(str){
+let newstring=" ";
+for(let i=str.length-1;i>=0;i--){
+newstring+=str[i];
+}
+return newstring;
+}
+const s=prompt("enter the string:");
+const result=rs(s);
+document.write("the revvers string is" +result);
+        </script>
+    </body>
+</html>
