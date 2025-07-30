@@ -1,0 +1,1 @@
+The E-Vaccination Management System is a digital platform designed to streamline the vaccination process through efficient record-keeping, appointment scheduling, and real-time updates. This system serves as a centralized hub for managing vaccination data of individuals, healthcare centers, and administrative bodies.
